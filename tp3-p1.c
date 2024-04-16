@@ -9,6 +9,8 @@ int main()
 {
     
     int simulation[filas][columnas];
+    int vMax[3] = {0,0,10000};
+    int vMin[3] = {0,0,50000};
     float promedioXano[filas];
     int aux = 0;
     srand(time(NULL));
@@ -54,6 +56,39 @@ int main()
         }
         printf(" %.2f ", promedioXano[k]);
     }
+
+    //valor mas grande
+    for (int i = 0; i < filas; i++)
+    {
+        for (int j = 0; j < columnas; j++)
+        {
+            
+            if(vMin[2] > simulation[i][j]){
+                vMin[2] = simulation[i][j];
+                vMin[0] = i;
+                vMin[1] = j;
+            }
+            if(vMax[2] < simulation[i][j]){
+                vMax[2] = simulation[i][j];
+                vMax[0] = i;
+                vMax[1] = j;
+            }
+        }
+        
+    }
+    //Mostras el min y el max
+    printf("\n");
+    for (int i = 0; i < 3; i++)
+    {
+        printf("%d ", vMin[i]);
+    }
+    printf("\n");
+    for (int i = 0; i < 3; i++)
+    {
+        printf("%d ", vMax[i]);
+    }
+    
+    
 
     return 0;
 }
