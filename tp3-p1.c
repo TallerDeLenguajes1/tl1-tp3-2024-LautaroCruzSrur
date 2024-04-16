@@ -4,6 +4,8 @@
 
 #define filas 5
 #define columnas 12
+void mostrarMin(int *vMin);
+void mostrarMin(int *vMax);
 
 int main()
 {
@@ -78,17 +80,139 @@ int main()
     }
     //Mostras el min y el max
     printf("\n");
-    for (int i = 0; i < 3; i++)
-    {
-        printf("%d ", vMin[i]);
-    }
-    printf("\n");
-    for (int i = 0; i < 3; i++)
-    {
-        printf("%d ", vMax[i]);
-    }
-    
-    
+    mostrarMin(vMin);
+    mostrarMin(vMax);
 
     return 0;
 }
+
+void mostrarMin(int *vMin){
+        switch (vMin[0])
+        {
+        case  0:
+            printf("2024 ");
+            break;
+            case 1:
+            printf("2025 ");
+            break;
+            case 2:
+            printf("2026 ");
+            break;
+            case 3:
+            printf("2027 ");
+            break;
+            case 4:
+            printf("2028 ");
+            break;
+        default:
+            break;
+        }
+        switch (vMin[1])
+        {
+        case  0:
+            printf("Enero_");
+            break;
+            case 1:
+            printf("Febrero_");
+            break;
+            case 2:
+            printf("Marzo_");
+            break;
+            case 3:
+            printf("Abril_");
+            break;
+            case 4:
+            printf("Mayo_");
+            break;
+            case 5:
+            printf("Junio_");
+            break;
+            case 6:
+            printf("Julio_");
+            break;
+            case 7:
+            printf("Agosto_");
+            break;
+            case 8:
+            printf("Septiembre_");
+            break;
+            case 9:
+            printf("Octubre_");
+            break;
+            case 10:
+            printf("Noviembre_");
+            break;
+            case 11:
+            printf("Diciembre_");
+            break;
+        default:
+            break;
+        }
+        printf(" %d ", vMin[2]);
+        printf("\n");
+};
+void mostrarMax(int *vMax){
+    switch (vMax[0])
+        {
+        case  0:
+            printf("2024 ");
+            break;
+            case 1:
+            printf("2025 ");
+            break;
+            case 2:
+            printf("2026 ");
+            break;
+            case 3:
+            printf("2027 ");
+            break;
+            case 4:
+            printf("2028 ");
+            break;
+        default:
+            break;
+        }
+        switch (vMax[1])
+        {
+        case  0:
+            printf("Enero_");
+            break;
+            case 1:
+            printf("Febrero_");
+            break;
+            case 2:
+            printf("Marzo_");
+            break;
+            case 3:
+            printf("Abril_");
+            break;
+            case 4:
+            printf("Mayo_");
+            break;
+            case 5:
+            printf("Junio_");
+            break;
+            case 6:
+            printf("Julio_");
+            break;
+            case 7:
+            printf("Agosto_");
+            break;
+            case 8:
+            printf("Septiembre_");
+            break;
+            case 9:
+            printf("Octubre_");
+            break;
+            case 10:
+            printf("Noviembre_");
+            break;
+            case 11:
+            printf("Diciembre_");
+            break;
+        default:
+            break;
+        }
+        printf(" %d ", vMax[2]);
+        printf("\n");
+};
